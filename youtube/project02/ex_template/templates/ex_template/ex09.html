@@ -1,0 +1,11 @@
+{% extends 'ex_template/base.html' %}
+{% block title %}Ex09{% endblock %}
+{% block headline %}ex09 템플릿 주석{% endblock %}
+{% block content %}
+
+<!-- 싱글라인 {# 주석 #} -->
+<!-- 여러줄 {% comment %} -->
+{% comment '주석입니다.'%}
+{% endcomment %}
+<!-- 이 HTML 주석은 브라우저 개발자도구에서 볼수 있음 주의 -->
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'ex_template/base.html' %}
+{% block title %}Ex02{% endblock %}
+{% block headline %}ex02 템플릿 필터{% endblock %}
+{% block content %}
+    val1:{{val1}} <br>
+    val1|escape : {{val1|escape}} <br>
+    val1|striptags : {{val1|striptags}} <br>
+    val1|length : {{val1|length}} <br>
+    val1| upper : {{val1|upper}} <br>
+    val1|linebreaks : {{val1|linebreaks}} <br>
+    val1|upper|linebreaks : {{val1|upper|linebreaks}} <br>
+    <hr>
+    lst|lower|join:"@" {{lst|lower|join:"@"}} <br>
+    dict|upper : {{dict|upper}} <br>
+    unknown|default : {{unknown|default:'기본값'}} <br>
+    bio|truncatewords:4 :{{bio|truncatewords:4}}
+    lst|plluralize: {{lst|pluralize}} <br>
+    ls|pluralize : {{ls|pluralize}} <br>
+    lss|pluralize : {{lss|pluralize:'es'}}
+{% endblock %}

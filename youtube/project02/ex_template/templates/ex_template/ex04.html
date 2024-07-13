@@ -1,0 +1,14 @@
+{% extends 'ex_template/base.html' %}
+{% block title %}Ex04{% endblock %}
+{% block headline %}ex04 템플릿 if 태그{% endblock %}
+{% block content %}
+    {% if value == 100 %}
+    {{value}}
+    {% endif %}
+    <br>
+    {% if name_list %}
+    name_list|length:{{name_list|length}}
+    {% else %}
+    name_list is empty!
+    {% endif %}
+{% endblock %}

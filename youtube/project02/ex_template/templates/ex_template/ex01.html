@@ -1,0 +1,14 @@
+{% extends 'ex_template/base.html' %}
+{% block title %}Ex01{% endblock %}
+{% block headline %}ex01 템플릿 변수{% endblock %}
+{% block content %}
+    n1:{{n1}}<br>
+    lst : {{lst}}<br>
+    tup:{{tup}}<br>
+    dict:{{dict}}<br>
+    <hr>
+    {{lst.0}}, {{lst.2}} <br>
+    {{tup.1}}, {{tup.2}} <br>
+    {{dict.a}}, {{dict.b}} <br>
+    unknown:[{{un}}]
+{% endblock %}

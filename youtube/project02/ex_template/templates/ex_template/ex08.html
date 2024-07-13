@@ -1,0 +1,13 @@
+{% extends 'ex_template/base.html' %}
+{% block title %}Ex08{% endblock %}
+{% block headline %}ex08 템플릿 csrf 이해하기{% endblock %}
+{% block content %}
+    <h1>Hello</h1>
+    결과:{{html}}
+    <hr>
+    {% autoescape off%}
+    결과 :{{html}}
+    {% endautoescape %}
+    <hr>
+    결과 : {{html|safe}}
+{% endblock %}

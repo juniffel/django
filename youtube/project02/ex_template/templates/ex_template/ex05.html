@@ -1,0 +1,10 @@
+{% extends 'ex_template/base.html' %}
+{% block title %}Ex05{% endblock %}
+{% block headline %}ex05 템플릿 url이해하기{% endblock %}
+{% block content %}
+    <ul>
+        {% for url in url_list %}
+            <li>{{url}}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

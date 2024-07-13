@@ -1,0 +1,31 @@
+{% extends 'ex_template/base.html' %}
+{% block title %}Ex03{% endblock %}
+{% block headline %}ex03 템플릿 태그{% endblock %}
+{% block content %}
+    <ol>
+        {% for name in name_list %}
+            <li>이름:{{name}}</li>
+        {% endfor %}
+    </ol>
+    <br>
+    <ul>
+        {% for name in name_list %}
+            <li>
+                이름:{{name}} <br>
+                forloop.counter : {{forloop.counter}} <br>
+                forloop.counter0 : {{forloop.counter0}} <br>
+                forloop.revcounter : {{forloop.revcounter}} <br>
+                forloop.revcounter0 : {{forloop.revcounter0}} <br>
+                forloop.first : {{forloop.first}} <br>
+                forloop.last : {{forloop.last}} <br>
+            </li>
+        {% endfor %}
+    </ul>
+    <ul>
+        {% for info in info_list %}
+            <li>
+                {{info.name}}:{{info.age}} <br>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

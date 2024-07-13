@@ -1,0 +1,19 @@
+{% extends 'ex_template/base.html' %}
+{% block title %}Ex07{% endblock %}
+{% block headline %}ex07 템플릿 with 이해하기{% endblock %}
+{% block content %}
+    value:{{value}} <br>
+    <hr>
+    {% with a=value %}
+    a:[{{a}}] <br>
+    {% endwith %}
+    a:[{{a}}] <br>
+    <hr>
+    {% with name=info.name %}
+    올해의 인물:{{name}}
+    {% endwith %}
+    <hr>
+    {% with info.age as age %}
+    올해의 인물 나이:{{age}}
+    {% endwith %}
+{% endblock %}

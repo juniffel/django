@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Example View 메인함수</h1>
+    현재 시간 : {{now}}
+    <hr>
+    <div id = 'content1'>
+        <h3>Request 이해하기(함수형 뷰)</h3>
+        <ol>
+            <li>GET요청1:<a href="{% url 'exview:get1' %}">get요청1</a></li>
+            <li>GET요청2:<a href="{% url 'exview:get2' '100' '200' 'hell' %}">get요청2</a></li>
+            <li>
+                <form action="post1/", method = post>
+                    {% csrf_token %}
+                    <input type="text" name="n1">
+                    <input type="text" name='n2'>
+                    <input type="submit" value='요청 및 전송'>
+                </form>
+            </li>
+            <li>
+                <form action="post2/hello/123/", method = post>
+                    {% csrf_token %}
+                    <input type="text" name="n1">
+                    <input type="text" name='n2'>
+                    <input type="submit" value='요청 및 전송'>
+                </form>
+            </li>
+            <li>GETPOST1요청:<a href="getpost1/">getpost1요청</a></li>
+            <li>GETPOST2요청:
+                <form action="getpost1/", method = post>
+                    {% csrf_token %}
+                    <input type="text" name="n1">
+                    <input type="text" name='n2'>
+                    <input type="submit" value='요청 및 전송'>
+                </form>
+            </li>
+        </ol>
+    </div>
+    <div id = 'content2'>
+            <h3>Request 이해하기(클래스형 뷰)</h3>
+            <ol>
+                <li>GET요청3:<a href="{% url 'exview:get3' %}">get요청3</a></li>
+                <li>GET요청4:<a href="{% url 'exview:get4' ,'100','200%,'hell'}">get요청4</a></li>
+                <li>
+                    <form action="post3/", method = post>
+                        {% csrf_token %}
+                        <input type="text" name="n1">
+                        <input type="text" name='n2'>
+                        <input type="submit" value='요청 및 전송'>
+                    </form>
+                </li>
+                <li>
+                    <form action="post4/hello/123/", method = post>
+                        {% csrf_token %}
+                        <input type="text" name="n1">
+                        <input type="text" name='n2'>
+                        <input type="submit" value='요청 및 전송'>
+                    </form>
+                </li>
+                <li>GETPOST1요청:<a href="getpost2/">getpost1요청</a></li>
+                <li>GETPOST2요청:
+                    <form action="getpost2/", method = post>
+                        {% csrf_token %}
+                        <input type="text" name="user">
+                        <input type="text" name='pwd'>
+                        <input type="submit" value='요청 및 전송'>
+                    </form>
+                </li>
+            </ol>
+    </div>
+</body>
+</html>

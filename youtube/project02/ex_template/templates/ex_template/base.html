@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Exam Template{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'sitetyle.css' %}">
+    <link rel="stylesheet" href="{% static 'ex_template/appstyle.css' %}">
+</head>
+<body>
+    <img src="{% static 'hou.gif' %}" alt="" width= '400px', height = '300px'>
+    <img src="{% static 'ex_template/ggobugi.gif' %}"alt="" width= '400px', height = '300px'>
+    <h1>Exam Template</h1>
+    <hr>
+    <h3>{% block headline %}Headline{% endblock %}</h3>
+    <div class="contents">
+        {% block content %}Content...{% endblock %}
+    </div>
+    <hr>
+    <div>하단메뉴</div>
+</body>
+</html>
