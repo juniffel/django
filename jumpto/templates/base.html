@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 네비게이션 바 적용 -->
+    {% include 'navbar.html' %}
+
+    <!-- 콘텐츠 영역 -->
+    {% block content %}{% endblock content %}
+
+    <!-- Bootstrap JS -->
+    <script src="{% static 'bootstrap.min.js' %}"></script>
+    <!-- 자바스크립트 Start -->
+    {% block script %}
+    {% endblock %}
+    <!-- 자바스크립트 End -->
+</body>
+</html>
