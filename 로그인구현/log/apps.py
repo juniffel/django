@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class BoardConfig(AppConfig):
+class LogConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'board'
+    name = 'log'
