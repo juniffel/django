@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if user.is_authenticated %}
+<a href="{%url 'log:logout'%}" class="btn btn-primary">{{user.username}}:로그아웃</a>
+{% else %}
+<a href="{% url 'log:login' %}" class="btn btn-primary">로그인</a>
+{% comment %} <a href="{% url 'log:register' %}" class="btn btn-primary">회원가입</a> {% endcomment %}
+{% endif %}
+
+<table class="table my-3 table-striped">
+  <thead class="">
+    <tr>
+      <th scope="col">username</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% if data %}
+    {% for  i in  data%}
+      <tr>
+        <th>{{i.username}}</th>
+        <td>{{i.email}}</td>
+      </tr>
+    {% endfor %}
+    {% endif %}
+  </tbody>
+</table>
+{% endblock content %}
