@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+로그인 인증에 성공하여 홈페이지에 들어 왔습니다.
+환영합니다.
+user : {{user.username}}
+<a href="{%url 'pj01:index'%}">로그아웃</a>
+<a href="{%url 'pj01:index'%}">인덱스</a>
+{% endblock content %}

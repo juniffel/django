@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class LogConfig(AppConfig):
+class Pj03Config(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'log'
+    name = 'pj03'

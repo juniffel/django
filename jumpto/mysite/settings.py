@@ -121,7 +121,7 @@ STATIC_URL = "static/"
 
 # 정적파일 관리 폴더
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
+    BASE_DIR/"static",
 ]
 
 # Default primary key field type

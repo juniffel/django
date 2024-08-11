@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class= 'container mx-5 d-flex justify-content-center align-items-center'></div>
+  <form action="{%url 'pj01:signup'%}" method="post" id="signup">
+    {%csrf_token%}
+      <!-- 에러 메시지 출력을 위한 -->
+    <div class="form-group">
+      <label for="username" name = 'username'>ID:</label>
+      <input type="text", class="form-control" name = 'username' id = 'username' autocomplete="username">
+    </div>
+    <div class="form-group">
+      <label for="password1" name = 'password1'>PWD:</label>
+      <input type="password" class="form-control" name = 'password1' id='password1' autocomplete="new-password">
+    </div>
+    <div class="form-group">
+      <label for="password2" name = 'password2' >PWD확인:</label>
+      <input type="password" class="form-control" name = 'password2' id='password2' autocomplete="new-password">
+      <div class="error-message" id="pwdError"></div>
+    </div>
+    <div class="my-3">
+      <button type="submit" class="btn btn-primary" id = 'btn'>가입하기</button>
+    </div>
+  </form>
+</div>
+{% endblock content %}
+
+{% block script %}
+<script type='text/javascript'>
+  document.getElementById('signup').addEventListener('submit', function(event) {
+
+    const pwd1 = document.getElementById('password1').value
+    const pwd2 = document.getElementById('password2').value
+    // console.log(pwd1,pwd2)
+    if (pwd1!=pwd2){
+      event.preventDefault(); // 폼 제출 방지
+      document.getElementById('pwdError').innerText = '비밀번호가 일치하지 않습니다.'
+    }
+    else {
+
+    }
+  })
+
+</script>
+{% endblock %}
