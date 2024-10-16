@@ -1,0 +1,10 @@
+{% block title %}상세보기{% endblock  %}
+<a href="{% url "ex_view:index" %}">홈</a>
+<br>
+{% block content %}
+{{object.name}} - {{object.age}}
+<br>
+{{object.intro}}
+<a href="{% url "ex_view:update" object.id %}">수정</a>
+<a href="{% url "ex_view:delete" object.id %}">삭제</a>
+{% endblock content %}

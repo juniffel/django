@@ -1,0 +1,11 @@
+{% block title %}로그인{% endblock title %}
+{% block content %}
+  <form action="" method="post">
+    {% csrf_token %}
+    <input type="text" name="id" id="" value={{remember_id}}><br>
+    <input type="password" name="pw" id=""><br>
+    <input type="checkbox" name="remember" {% if remember_id %}checked {% endif %} vlaue='1' id="">
+    아이디 기억하기
+    <input type="submit" value="로그인">
+  </form>
+{% endblock content %}

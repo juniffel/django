@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>폼클래스 사용예시</h2>
+  <form action="" method="post">
+    {% csrf_token %}
+    {{form}}
+    <input type="submit" value="전송" id="">
+  </form>
+
+  <h4>p 태그로 감싸기</h4>
+  <form action="" method="post">
+    {% csrf_token %}
+    <p>
+    {{form.as_p}}
+    </p>
+    <input type="submit" value="전송" id="">
+  </form>
+
+  <h4>ul 태그로 감싸기</h4>
+  <form action="" method="post">
+    {% csrf_token %}
+    <ul>
+    {{form.as_ul}}
+    </ul>
+    <input type="submit" value="전송" id="">
+  </form>
+
+  <h4>이름,나이만 가져오기</h4>
+  {{form.errors}}
+  <form action="" method="post">
+    {% csrf_token %}
+    이름:{{form.name}} [{{form.name.errors}}]
+    나이:{{form.age}} [{{form.age.errors}}]
+    <input type="submit" value="전송" id="">
+  </form>
+</body>
+</html>

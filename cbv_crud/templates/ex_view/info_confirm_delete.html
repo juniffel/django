@@ -1,0 +1,10 @@
+{% block title %}삭제{% endblock title %}
+
+{% block content %}
+<form action="" method="post">
+  {% csrf_token %}
+  {{object.name}}-{{object.age}}을(를) 삭제 하시겠습니까?
+  <input type="submit" value="삭제">
+</form>
+
+{% endblock content %}

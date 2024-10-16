@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}글{{button_label}}{% endblock title %}
+
+{% block content %}
+<form action="" method="post">
+  {% csrf_token %}
+  <table border='1'>
+    {{form.as_table}}
+  </table>
+
+  <button type="submit">{{button_label}}</button>
+</form>
+{% endblock content %}

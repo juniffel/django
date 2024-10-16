@@ -1,0 +1,9 @@
+{% block title %} 등록 {% endblock title %}
+
+{% block content %}
+<form action="" method="post">
+  {% csrf_token %}
+  {{form}}
+  <input type="submit" value="등록">
+</form>
+{% endblock content %}

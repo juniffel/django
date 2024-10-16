@@ -1,0 +1,10 @@
+{% block title %}리스트 뷰{% endblock title %}
+
+{% block content %}
+<a href="{% url "ex_view:create" %}">등록</a>
+{% if object_list %}
+  {% for object in object_list %}
+  <li>{{object}}<a href="{% url "ex_view:detail" object.id%}">상세보기</a></li>
+  {% endfor %}
+{% endif %}
+{% endblock content %}

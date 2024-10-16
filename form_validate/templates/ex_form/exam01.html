@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>기존 폼 태그 사용</h2>
+  <form action="" method="post"></form>
+    {% csrf_token %}
+    이름: <input type="text" name="name" id="">
+    나이: <input type="number" name="age" id="">
+    <input type="submit" value="전송" >
+  </form>
+
+</body>
+</html>

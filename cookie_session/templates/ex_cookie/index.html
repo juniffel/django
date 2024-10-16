@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}인덱스{% endblock title %}
+
+{% block content %}
+쿠키 실습
+<ul>
+{% for cookie in cookies  %}
+  쿠키:{{cookie}}
+{% endfor %}
+</ul>
+<a href="{% url 'ex_cookie:sc' %}">세션쿠키확인</a><br>
+<a href="{% url 'ex_cookie:pc' %}">영구쿠키확인</a><br>
+<a href="{% url 'ex_cookie:login' %}">로그인</a>
+{% endblock content %}

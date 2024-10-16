@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}{% endblock title %}
+
+{% block content %}
+  날짜:{{object.regdate}}<br>
+  조회수:{{object.readcount}}<br>
+  작성자:{{object.writer}}<br>
+  제목:{{object.title}}<br>
+  내용:{{object.content}}<br>
+  <hr>
+  <a href="{% url "board:edit" object.id %}">수정</a>
+  <a href="{% url "board:remove" object.id%}">삭제</a>
+  <a href="{% url "board:list" %}">목록</a>
+{% endblock content %}
